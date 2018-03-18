@@ -1,54 +1,28 @@
 <template>
-  <div id="app">
-    <header>
-      <span>Vue.js PWA</span>
-    </header>
-    <main>
-      <img src="./assets/logo.png" alt="Vue.js PWA">
-      <router-view></router-view>
-    </main>
+   <div class="container" id="app">
+     <HeadNav></HeadNav>
+    <h1>Weather Service</h1>
+    <router-view/>
   </div>
 </template>
 
 <script>
+import HeadNav from '@/components/HeadNav'
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    HeadNav:HeadNav
+  }
 }
 </script>
 
 <style>
-body {
-  margin: 0;
-}
-
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-}
-
-main {
-  text-align: center;
-  margin-top: 40px;
-}
-
-header {
-  margin: 0;
-  height: 56px;
-  padding: 0 16px 0 24px;
-  background-color: #35495E;
-  color: #ffffff;
-}
-
-header span {
-  display: block;
-  position: relative;
-  font-size: 20px;
-  line-height: 1;
-  letter-spacing: .02em;
-  font-weight: 400;
-  box-sizing: border-box;
-  padding-top: 16px;
+  width: 75%;
+  margin: 20px auto;
 }
 </style>

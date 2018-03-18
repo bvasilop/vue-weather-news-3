@@ -3,6 +3,15 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import axios from "axios"
+import VueAxios from 'vue-axios'
+import VueLocalStorage from 'vue-ls';
+
+let options = {
+	namespace: 'weather_'
+};
+
+Vue.use(VueLocalStorage, options);
 
 Vue.config.productionTip = false
 
